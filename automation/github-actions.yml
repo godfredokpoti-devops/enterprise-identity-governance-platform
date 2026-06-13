@@ -1,0 +1,40 @@
+name: Identity Governance CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  terraform-validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Validate
+        run: terraform validate
+
+  python-validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+
+      - name: Run Identity Automation
+        run: python automation/identity_automation.py
+
+      - name: Run Access Review
+        run: python automation/access_review.py
+
+      - name: Run Audit Reporting
+        run: python automation/audit_reporting.py
