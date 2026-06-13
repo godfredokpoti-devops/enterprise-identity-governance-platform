@@ -1,40 +1,11 @@
-name: Identity Governance CI
+- name: Run Identity Lifecycle Manager
+        run: python automation/identity_lifecycle_manager.py
 
-on:
-  push:
-    branches:
-      - main
+      - name: Run Access Certification Engine
+        run: python automation/access_certification_engine.py
 
-jobs:
-  terraform-validation:
-    runs-on: ubuntu-latest
+      - name: Run Compliance Reporting Engine
+        run: python automation/compliance_reporting_engine.py
 
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3
-
-      - name: Terraform Init
-        run: terraform init
-
-      - name: Terraform Validate
-        run: terraform validate
-
-  python-validation:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-
-      - name: Run Identity Automation
-        run: python automation/identity_automation.py
-
-      - name: Run Access Review
-        run: python automation/access_review.py
-
-      - name: Run Audit Reporting
-        run: python automation/audit_reporting.py
+      - name: Run Privileged Access Analyzer
+        run: python automation/privileged_access_analyzer.py

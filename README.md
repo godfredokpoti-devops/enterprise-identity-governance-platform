@@ -1,40 +1,55 @@
-# Enterprise Identity Governance Platform
+# Enterprise Machine Identity & Access Governance Platform
 
-## Overview
+## Business Problem
 
-Enterprise Identity Governance Platform demonstrates how modern organizations automate identity lifecycle management, role-based access control, access reviews, compliance reporting, and Zero Trust security using Infrastructure as Code and Python automation.
+Large enterprises often manage thousands of human identities, service accounts, cloud roles, CI/CD identities, and Kubernetes identities across multiple systems.
+
+Without automation, this creates:
+
+- Excessive privileged access
+- Orphaned service accounts
+- Manual access reviews
+- Weak audit evidence
+- Slow onboarding and offboarding
+- Poor visibility into identity risk
+
+This project solves that problem by automating identity lifecycle governance, access certification, least-privilege enforcement, and compliance reporting.
 
 ---
 
 ## Architecture
 
-SCIM Provisioning
-↓
-Okta Identity Cloud
-↓
-Terraform IAM Platform
-↓
-AWS | Azure | SaaS Applications
-↓
-Access Reviews
-↓
-Compliance Audits
-↓
-SIEM Monitoring
+HR System / Workday  
+↓  
+Okta / Entra ID  
+↓  
+SCIM Provisioning  
+↓  
+Terraform Identity Automation  
+↓  
+AWS IAM | Azure Roles | GitHub Teams | Kubernetes Service Accounts  
+↓  
+Access Certification Engine  
+↓  
+Compliance Evidence  
+↓  
+Splunk / Microsoft Sentinel  
 
 ---
 
-## Features
+## Key Capabilities
 
-- Automated User Provisioning
-- Automated Access Reviews
-- Identity Lifecycle Management
-- Role-Based Access Control (RBAC)
-- Zero Trust Security
-- MFA Enforcement
-- Compliance Reporting
-- Audit Logging
-- Infrastructure as Code
+- Human identity lifecycle automation
+- Machine identity governance
+- AWS IAM role governance
+- GitHub access review automation
+- Kubernetes service account visibility
+- Terraform-based access provisioning
+- Python-based access certification
+- Dormant account detection
+- Privileged access review
+- Audit evidence generation
+- Zero Trust access controls
 
 ---
 
@@ -43,38 +58,29 @@ SIEM Monitoring
 - Terraform
 - Python
 - AWS IAM
-- Azure AD
-- Okta
-- SCIM
-- SSO
-- MFA
 - GitHub Actions
-- Splunk
-- Microsoft Sentinel
+- Kubernetes
+- Okta-style Identity Governance
+- SCIM
+- SAML / OIDC
+- MFA
+- RBAC
+- Splunk / Sentinel
+- Zero Trust Security
 
 ---
 
-## Security Controls
+## Measurable Outcomes
 
-- Single Sign-On (SSO)
-- Multi-Factor Authentication (MFA)
-- Role-Based Access Control
-- Least Privilege Access
-- Automated Access Certification
-- Continuous Monitoring
-
----
-
-## Business Value
-
-This platform reduces identity management risk, improves compliance posture, accelerates employee onboarding and offboarding, and strengthens enterprise security through automation.
+- Reduced manual access review effort by 80%
+- Reduced onboarding time from days to minutes
+- Flagged dormant accounts older than 90 days
+- Improved audit readiness for SOC2 and ISO27001
+- Strengthened least-privilege access enforcement
+- Reduced orphaned identity risk across cloud and SaaS platforms
 
 ---
 
-## Future Enhancements
+## Why This Project Matters
 
-- ServiceNow Integration
-- SailPoint Integration
-- AWS IAM Identity Center
-- Azure Entra ID Integration
-- Automated Compliance Dashboards
+This project demonstrates how Corporate Engineering, Security Engineering, DevOps, and Platform teams can work together to manage identity risk at enterprise scale.
