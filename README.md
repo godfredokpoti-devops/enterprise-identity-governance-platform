@@ -1,8 +1,12 @@
 # Enterprise Machine Identity & Access Governance Platform
 
+## Architecture Diagram
+
+![Architecture](screenshots/enterprise-architecture.png)
+
 ## Business Problem
 
-Large enterprises often manage thousands of human identities, service accounts, cloud roles, CI/CD identities, and Kubernetes identities across multiple systems.
+Large enterprises manage thousands of human identities, service accounts, cloud roles, CI/CD identities, and Kubernetes identities across multiple systems.
 
 Without automation, this creates:
 
@@ -81,6 +85,21 @@ Splunk / Microsoft Sentinel
 
 ---
 
-## Why This Project Matters
+## Security Controls
 
-This project demonstrates how Corporate Engineering, Security Engineering, DevOps, and Platform teams can work together to manage identity risk at enterprise scale.
+- Single Sign-On
+- Multi-Factor Authentication
+- Role-Based Access Control
+- Least Privilege Access
+- Automated Access Certification
+- Continuous Monitoring
+
+---
+
+## Future Enhancements
+
+- ServiceNow Integration
+- SailPoint Integration
+- AWS IAM Identity Center
+- Azure Entra ID Integration
+- Automated Compliance Dashboards
