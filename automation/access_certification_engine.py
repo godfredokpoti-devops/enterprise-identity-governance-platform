@@ -1,19 +1,38 @@
-users = [
+import json
+
+access_reviews = [
+
     {
-        "name": "John Doe",
-        "last_login_days": 120
+        "user": "john.doe",
+        "role": "Developer",
+        "manager_decision": "Approved"
     },
+
     {
-        "name": "Sarah Smith",
-        "last_login_days": 10
+        "user": "sarah.smith",
+        "role": "Security Analyst",
+        "manager_decision": "Approved"
+    },
+
+    {
+        "user": "service-account-prod",
+        "role": "Root",
+        "manager_decision": "Revoked"
     }
 ]
 
-for user in users:
+for review in access_reviews:
 
-    if user["last_login_days"] > 90:
-
-        print(
-            f"REVIEW REQUIRED: "
-            f"{user['name']}"
+    print(
+        json.dumps(
+            review,
+            indent=4
         )
+    )
+
+    print(
+        f"Certification Status: "
+        f"{review['manager_decision']}"
+    )
+
+    print("-" * 40)
