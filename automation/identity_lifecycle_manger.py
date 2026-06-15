@@ -1,6 +1,7 @@
 import json
 
-users = [
+
+employees = [
     {
         "name": "John Doe",
         "department": "Engineering",
@@ -8,35 +9,31 @@ users = [
     },
     {
         "name": "Sarah Smith",
-        "department": "Finance",
-        "role": "Analyst"
+        "department": "Security",
+        "role": "Security Analyst"
     }
 ]
 
-def provision_access(user):
 
-    access_map = {
-        "Developer": [
-            "GitHub",
-            "AWS",
-            "Jira"
-        ],
+def onboard_user(user):
+    print(f"Creating identity for {user['name']}")
 
-        "Analyst": [
-            "PowerBI",
-            "Salesforce"
-        ]
+    identity = {
+        "name": user["name"],
+        "department": user["department"],
+        "role": user["role"],
+        "status": "Active"
     }
 
-    permissions = access_map.get(
-        user["role"],
-        []
-    )
+    return identity
+
+
+for employee in employees:
+    result = onboard_user(employee)
 
     print(
-        f"Provisioning {user['name']} "
-        f"with access to {permissions}"
+        json.dumps(
+            result,
+            indent=4
+        )
     )
-
-for user in users:
-    provision_access(user)
