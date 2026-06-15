@@ -1,23 +1,35 @@
-privileged_identities = [
+import json
+
+accounts = [
     {
-        "identity": "github-admin",
-        "type": "service_account",
-        "privilege": "admin",
-        "last_used_days": 120
+        "user": "godfred.okpoti",
+        "role": "Administrator",
+        "privileged": True
     },
     {
-        "identity": "aws-deploy-role",
-        "type": "machine_identity",
-        "privilege": "power_user",
-        "last_used_days": 12
+        "user": "sarah.smith",
+        "role": "Security Analyst",
+        "privileged": False
+    },
+    {
+        "user": "service-account-prod",
+        "role": "Root",
+        "privileged": True
     }
 ]
 
-for identity in privileged_identities:
-    if identity["last_used_days"] > 90:
+for account in accounts:
+
+    if account["privileged"]:
+
         print(
-            f"PRIVILEGED ACCESS REVIEW REQUIRED: "
-            f"{identity['identity']} | "
-            f"Type={identity['type']} | "
-            f"LastUsed={identity['last_used_days']} days"
+            f"High Risk Access Detected: "
+            f"{account['user']}"
+        )
+
+        print(
+            json.dumps(
+                account,
+                indent=4
+            )
         )
