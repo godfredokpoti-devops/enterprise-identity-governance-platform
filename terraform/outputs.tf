@@ -1,7 +1,7 @@
-output "iam_role_name" {
-  value = aws_iam_role.identity_admin.name
+output "developer_user" {
+  value = aws_iam_user.developer.name
 }
 
-output "iam_policy_name" {
-  value = aws_iam_policy.identity_policy.name
+output "security_user" {
+  value = aws_iam_user.security.name
 }
