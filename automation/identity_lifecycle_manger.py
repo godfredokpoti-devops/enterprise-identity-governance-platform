@@ -3,12 +3,12 @@ import json
 
 employees = [
     {
-        "name": "John Doe",
+        "name": "Godfred Okpoti",
         "department": "Engineering",
         "role": "Developer"
     },
     {
-        "name": "Sarah Smith",
+        "name": "Frederick Sowah",
         "department": "Security",
         "role": "Security Analyst"
     }
