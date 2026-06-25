@@ -1,105 +1,132 @@
-# Enterprise Machine Identity & Access Governance Platform
+# Enterprise Identity Governance Platform
 
-## Architecture Diagram
-
-![Architecture](screenshots/enterprise-architecture.png)
-
-## Business Problem
-
-Large enterprises manage thousands of human identities, service accounts, cloud roles, CI/CD identities, and Kubernetes identities across multiple systems.
-
-Without automation, this creates:
-
-- Excessive privileged access
-- Orphaned service accounts
-- Manual access reviews
-- Weak audit evidence
-- Slow onboarding and offboarding
-- Poor visibility into identity risk
-
-This project solves that problem by automating identity lifecycle governance, access certification, least-privilege enforcement, and compliance reporting.
+An enterprise-grade Identity and Access Management (IAM) platform built with Python and Flask that demonstrates modern Identity Governance Administration (IGA), Identity Lifecycle Management (ILM), Privileged Access Management (PAM), Compliance Reporting, and Access Certification.
 
 ---
 
-## Architecture
+## Project Overview
 
-HR System / Workday  
-↓  
-Okta / Entra ID  
-↓  
-SCIM Provisioning  
-↓  
-Terraform Identity Automation  
-↓  
-AWS IAM | Azure Roles | GitHub Teams | Kubernetes Service Accounts  
-↓  
-Access Certification Engine  
-↓  
-Compliance Evidence  
-↓  
-Splunk / Microsoft Sentinel  
+This project simulates an enterprise identity governance platform used by large organizations to manage employee identities, privileged accounts, compliance audits, and access reviews.
+
+It demonstrates how identity governance solutions automate:
+
+- Identity Lifecycle Management
+- User Provisioning
+- User Deprovisioning
+- Privileged Access Monitoring
+- Identity Risk Analysis
+- Compliance Reporting
+- Access Reviews
+- Audit Logging
 
 ---
 
-## Key Capabilities
+## Features
 
-- Human identity lifecycle automation
-- Machine identity governance
-- AWS IAM role governance
-- GitHub access review automation
-- Kubernetes service account visibility
-- Terraform-based access provisioning
-- Python-based access certification
-- Dormant account detection
-- Privileged access review
-- Audit evidence generation
-- Zero Trust access controls
-
----
-
-## Technology Stack
-
-- Terraform
-- Python
-- AWS IAM
-- GitHub Actions
-- Kubernetes
-- Okta-style Identity Governance
-- SCIM
-- SAML / OIDC
-- MFA
-- RBAC
-- Splunk / Sentinel
-- Zero Trust Security
+- Identity Lifecycle Management
+- User Provisioning Engine
+- User Deprovisioning
+- Privileged Session Monitoring
+- Access Review Dashboard
+- Compliance Dashboard
+- Governance Portal
+- Risk Scoring Engine
+- Audit Logging
+- SQLite Database
+- Flask Web Dashboard
 
 ---
 
-## Measurable Outcomes
+## Technologies Used
 
-- Reduced manual access review effort by 80%
-- Reduced onboarding time from days to minutes
-- Flagged dormant accounts older than 90 days
-- Improved audit readiness for SOC2 and ISO27001
-- Strengthened least-privilege access enforcement
-- Reduced orphaned identity risk across cloud and SaaS platforms
-
----
-
-## Security Controls
-
-- Single Sign-On
-- Multi-Factor Authentication
-- Role-Based Access Control
-- Least Privilege Access
-- Automated Access Certification
-- Continuous Monitoring
+| Technology | Purpose |
+|------------|---------|
+| Python | Backend |
+| Flask | Web Framework |
+| SQLite | Database |
+| HTML5 | User Interface |
+| CSS3 | Styling |
+| Git | Version Control |
+| GitHub | Repository |
+| Terraform | Infrastructure as Code (Future) |
+| AWS | Cloud Deployment (Planned) |
 
 ---
 
-## Future Enhancements
+## Project Structure
 
-- ServiceNow Integration
-- SailPoint Integration
-- AWS IAM Identity Center
-- Azure Entra ID Integration
-- Automated Compliance Dashboards
+```
+enterprise-identity-governance-platform/
+
+│
+├── dashboard/
+│   ├── web_dashboard.py
+│   ├── database.py
+│   ├── governance_portal.py
+│   ├── identity_lifecycle_manager.py
+│   ├── user_provisioning_engine.py
+│   ├── class_privileged_session_manager.py
+│   ├── compliance_dashboard.py
+│   ├── access_review_dashboard.py
+│   ├── risk_scoring_engine.py
+│
+├── docs/
+│   ├── architecture.md
+│   ├── project-summary.md
+│
+├── policies/
+│
+├── screenshots/
+│
+├── terraform/
+│
+└── README.md
+```
+
+---
+
+## Enterprise Modules
+
+### Identity Lifecycle Management
+
+- Employee onboarding
+- Employee offboarding
+- Department management
+- Employee status tracking
+
+---
+
+### User Provisioning
+
+- AWS Access
+- Azure Access
+- Kubernetes Access
+- Cloud Role Assignment
+
+---
+
+### Privileged Access Management
+
+- Active sessions
+- Session approvals
+- Session duration
+- Session monitoring
+
+---
+
+### Compliance
+
+- SOC2
+- ISO27001
+- MFA Coverage
+- Dormant Accounts
+- Privileged Accounts
+
+---
+
+### Governance
+
+- Access Reviews
+- Audit Logs
+- Compliance Reports
+- Risk Reports
