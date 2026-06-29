@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings - Enterprise Identity Governance Platform</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h2>Enterprise Identity Governance Platform</h2>
+        <div class="subtitle">Identity • Access • Compliance • Risk • Governance</div>
+    </div>
+
+    <div style="text-align:right;">
+        <strong>Godfred Okpoti</strong><br>
+        <span class="subtitle">Chief Identity Administrator</span>
+    </div>
+</header>
+
+<div class="layout">
+
+    <div class="sidebar">
+        <h3>Navigation</h3>
+        <hr>
+        <p>🏠 Dashboard</p>
+        <p>👤 Identity Lifecycle</p>
+        <p>🔑 User Provisioning</p>
+        <p>🛡️ Privileged Access</p>
+        <p>✅ Access Reviews</p>
+        <p>📊 Compliance</p>
+        <p>📜 Audit Logs</p>
+        <p>⚠️ Risk Engine</p>
+        <p>📈 Reports</p>
+        <p>⚙️ Settings</p>
+    </div>
+
+    <div class="main">
+
+        <h1>Platform Settings</h1>
+
+        <div class="grid">
+            <div class="card metric">
+                <h3>System Status</h3>
+                <div>Operational</div>
+            </div>
+
+            <div class="card metric">
+                <h3>AI Engine</h3>
+                <div>Running</div>
+            </div>
+
+            <div class="card metric">
+                <h3>Integrations</h3>
+                <div>8</div>
+            </div>
+
+            <div class="card metric">
+                <h3>Security Controls</h3>
+                <div>Enabled</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Platform Configuration</h2>
+            <table>
+                <tr>
+                    <th>Setting</th>
+                    <th>Value</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>Identity Provider</td>
+                    <td>Microsoft Entra ID</td>
+                    <td class="pass">Active</td>
+                </tr>
+                <tr>
+                    <td>Multi-Factor Authentication</td>
+                    <td>Required for Admins</td>
+                    <td class="pass">Enabled</td>
+                </tr>
+                <tr>
+                    <td>Passwordless Authentication</td>
+                    <td>FIDO2 / Authenticator</td>
+                    <td class="pass">Enabled</td>
+                </tr>
+                <tr>
+                    <td>Conditional Access</td>
+                    <td>Risk-Based Policies</td>
+                    <td class="pass">Enabled</td>
+                </tr>
+                <tr>
+                    <td>SCIM Provisioning</td>
+                    <td>Automated Lifecycle Sync</td>
+                    <td class="pass">Enabled</td>
+                </tr>
+                <tr>
+                    <td>Single Sign-On</td>
+                    <td>SAML / OIDC</td>
+                    <td class="pass">Enabled</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>AI Engine Configuration</h2>
+            <table>
+                <tr>
+                    <th>AI Feature</th>
+                    <th>Purpose</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>UEBA Analytics</td>
+                    <td>User behavior monitoring</td>
+                    <td class="pass">Enabled</td>
+                </tr>
+                <tr>
+                    <td>AI Risk Prediction</td>
+                    <td>Predicts risky access patterns</td>
+                    <td class="pass">Enabled</td>
+                </tr>
+                <tr>
+                    <td>Insider Threat Detection</td>
+                    <td>Detects abnormal privilege activity</td>
+                    <td class="pass">Enabled</td>
+                </tr>
+                <tr>
+                    <td>Privilege Scoring</td>
+                    <td>Ranks identity risk exposure</td>
+                    <td class="pass">Enabled</td>
+                </tr>
+                <tr>
+                    <td>Behavioral Analytics</td>
+                    <td>Analyzes login and access behavior</td>
+                    <td class="pass">Enabled</td>
+                </tr>
+                <tr>
+                    <td>Machine Learning Engine</td>
+                    <td>Risk classification model</td>
+                    <td class="pass">Running</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Connected Platforms</h2>
+            <table>
+                <tr>
+                    <th>Platform</th>
+                    <th>Integration Type</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>Microsoft Entra ID</td>
+                    <td>Identity Provider</td>
+                    <td class="pass">Connected</td>
+                </tr>
+                <tr>
+                    <td>AWS IAM</td>
+                    <td>Cloud Identity</td>
+                    <td class="pass">Connected</td>
+                </tr>
+                <tr>
+                    <td>Azure</td>
+                    <td>Cloud Platform</td>
+                    <td class="pass">Connected</td>
+                </tr>
+                <tr>
+                    <td>GitHub Enterprise</td>
+                    <td>Developer Access</td>
+                    <td class="pass">Connected</td>
+                </tr>
+                <tr>
+                    <td>Kubernetes</td>
+                    <td>RBAC Management</td>
+                    <td class="warn">Review Required</td>
+                </tr>
+                <tr>
+                    <td>ServiceNow</td>
+                    <td>Approval Workflow</td>
+                    <td class="pass">Connected</td>
+                </tr>
+                <tr>
+                    <td>HashiCorp Vault</td>
+                    <td>Secrets Management</td>
+                    <td class="pass">Connected</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Notification Settings</h2>
+            <table>
+                <tr>
+                    <th>Channel</th>
+                    <th>Use Case</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>Email Alerts</td>
+                    <td>Compliance and risk notifications</td>
+                    <td class="pass">Enabled</td>
+                </tr>
+                <tr>
+                    <td>Microsoft Teams</td>
+                    <td>Security operations alerts</td>
+                    <td class="pass">Enabled</td>
+                </tr>
+                <tr>
+                    <td>Slack</td>
+                    <td>Engineering workflow alerts</td>
+                    <td class="pass">Enabled</td>
+                </tr>
+                <tr>
+                    <td>SIEM Export</td>
+                    <td>Audit evidence forwarding</td>
+                    <td class="pass">Enabled</td>
+                </tr>
+                <tr>
+                    <td>Webhook</td>
+                    <td>Automation triggers</td>
+                    <td class="pass">Enabled</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Security Configuration</h2>
+            <ul>
+                <li class="pass">Zero Trust access policies enabled</li>
+                <li class="pass">Adaptive MFA enabled for high-risk users</li>
+                <li class="pass">Just-in-Time privileged access enabled</li>
+                <li class="pass">Privileged session recording enabled</li>
+                <li class="pass">Continuous access evaluation active</li>
+                <li class="warn">Kubernetes cluster-admin access requires review</li>
+                <li class="risk">Dormant privileged accounts require remediation</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>System Information</h2>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Platform Version</td>
+                    <td>Enterprise 2026.1</td>
+                </tr>
+                <tr>
+                    <td>AI Engine</td>
+                    <td>v5.0</td>
+                </tr>
+                <tr>
+                    <td>Database</td>
+                    <td>PostgreSQL</td>
+                </tr>
+                <tr>
+                    <td>Web Server</td>
+                    <td>Flask</td>
+                </tr>
+                <tr>
+                    <td>Python Runtime</td>
+                    <td>Python 3.13</td>
+                </tr>
+                <tr>
+                    <td>Last Backup</td>
+                    <td>Today 02:30 UTC</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Administration Actions</h2>
+            <button>Save Configuration</button>
+            <button>Backup Settings</button>
+            <button>Restore Configuration</button>
+            <button>Restart AI Engine</button>
+            <button>Export Audit Settings</button>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

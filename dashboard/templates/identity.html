@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Identity Lifecycle Management</title>
+    <style>
+        body{font-family:Arial;background:#f4f6f9;margin:0;color:#222}
+        header{background:#163A5F;color:white;padding:18px 35px;display:flex;justify-content:space-between;align-items:center}
+        .subtitle{font-size:14px;color:#d9e8f5}
+        .layout{display:flex;gap:25px;padding:30px}
+        .sidebar{width:220px;background:white;padding:25px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+        .sidebar p{font-size:16px;margin:18px 0}
+        .main{flex:1;min-width:0}
+        h1{color:#1f4e79;font-size:42px;margin-top:0}
+        .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-bottom:30px}
+        .card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+        .metric{text-align:center;height:130px;display:flex;flex-direction:column;justify-content:center}
+        .metric div{font-size:34px;font-weight:bold;color:#1f4e79}
+        table{width:100%;border-collapse:collapse;margin-top:15px}
+        th{background:#1f4e79;color:white;padding:12px}
+        td{padding:12px;border:1px solid #ddd}
+        .pass{color:green;font-weight:bold}
+        .warn{color:orange;font-weight:bold}
+        .risk{color:#c62828;font-weight:bold}
+        .section-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+        .full{grid-column:1/-1}
+        .sidebar a{
+    text-decoration:none;
+    color:#333;
+    display:block;
+    padding:8px 0;
+    font-weight:500;
+}
+
+.sidebar a:hover{
+    color:#1565af;
+    padding-left:6px;
+    transition:.2s;
+}
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h2 style="margin:0;">Enterprise Identity Governance Platform</h2>
+        <div class="subtitle">Identity • Access • Compliance • Risk • Governance</div>
+    </div>
+
+    <div style="text-align:right">
+        <strong>Godfred Okpoti</strong><br>
+        <span class="subtitle">Chief Identity Administrator</span>
+    </div>
+</header>
+
+<div class="layout">
+
+    <div class="sidebar">
+        <h3>Navigation</h3>
+        <hr>
+        <p><a href="/dashboard">🏠 Dashboard</a></p>
+        <p>👤 Identity Lifecycle</p>
+        <p>🔑 User Provisioning</p>
+        <p>🛡️ Privileged Access</p>
+        <p>✅ Access Reviews</p>
+        <p>📊 Compliance</p>
+        <p>📜 Audit Logs</p>
+        <p>⚠️ Risk Engine</p>
+        <p>📈 Reports</p>
+        <p>⚙️ Settings</p>
+    </div>
+
+    <div class="main">
+        <h1>Identity Lifecycle Management</h1>
+
+        <div class="grid">
+            <div class="card metric">
+                <h3>Total Employees</h3>
+                <div>856</div>
+            </div>
+
+            <div class="card metric">
+                <h3>Joiners This Month</h3>
+                <div>24</div>
+            </div>
+
+            <div class="card metric">
+                <h3>Movers</h3>
+                <div>17</div>
+            </div>
+
+            <div class="card metric">
+                <h3>Leavers</h3>
+                <div>9</div>
+            </div>
+        </div>
+
+        <div class="section-grid">
+
+            <div class="card">
+                <h2>Employee Lifecycle Status</h2>
+                <table>
+                    <tr>
+                        <th>Employee</th>
+                        <th>Department</th>
+                        <th>Lifecycle</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>Godfred Okpoti</td>
+                        <td>Platform Engineering</td>
+                        <td>Joiner</td>
+                        <td class="pass">Completed</td>
+                    </tr>
+                    <tr>
+                        <td>Sowah Frederick</td>
+                        <td>Cloud Engineering</td>
+                        <td>Mover</td>
+                        <td class="warn">Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Sowah</td>
+                        <td>Security</td>
+                        <td>Leaver</td>
+                        <td class="risk">In Progress</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>Identity Lifecycle Tasks</h2>
+                <ul>
+                    <li>Create Microsoft Entra ID account</li>
+                    <li>Assign AWS IAM role</li>
+                    <li>Provision GitHub Team access</li>
+                    <li>Create Kubernetes RBAC permissions</li>
+                    <li>Send ServiceNow approval request</li>
+                    <li>Notify hiring manager</li>
+                </ul>
+            </div>
+
+            <div class="card full">
+                <h2>Joiner / Mover / Leaver Workflow</h2>
+                <table>
+                    <tr>
+                        <th>Employee</th>
+                        <th>Event</th>
+                        <th>Application</th>
+                        <th>Action</th>
+                        <th>Approval Status</th>
+                    </tr>
+                    <tr>
+                        <td>Godfred Okpoti</td>
+                        <td>Joiner</td>
+                        <td>AWS, GitHub, Kubernetes</td>
+                        <td>Provision Access</td>
+                        <td class="pass">Approved</td>
+                    </tr>
+                    <tr>
+                        <td>Sowah Frederick</td>
+                        <td>Mover</td>
+                        <td>Azure, AWS IAM</td>
+                        <td>Update Role Assignment</td>
+                        <td class="warn">Pending Manager Approval</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Sowah</td>
+                        <td>Leaver</td>
+                        <td>Privileged Accounts</td>
+                        <td>Disable Access Immediately</td>
+                        <td class="risk">High Priority</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

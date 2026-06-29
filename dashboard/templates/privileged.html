@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Privileged Access</title>
+<style>
+body{font-family:Arial;background:#f4f6f9;margin:0;color:#222}
+header{background:#163a5f;color:white;padding:18px 35px;display:flex;justify-content:space-between;align-items:center}
+.subtitle{font-size:14px;color:#d9e8f5}
+.layout{display:flex;gap:25px;padding:30px}
+.sidebar{width:240px;background:white;padding:25px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.sidebar p{font-size:16px;margin:18px 0}
+.main{flex:1}
+h1{color:#1f4e79;font-size:42px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.metric{font-size:36px;font-weight:bold;color:#1f4e79}
+table{width:100%;border-collapse:collapse;margin-top:15px}
+th{background:#1f4e79;color:white;padding:12px}
+td{padding:12px;border:1px solid #ddd}
+.pass{color:green;font-weight:bold}
+.warn{color:orange;font-weight:bold}
+.risk{color:#c62828;font-weight:bold}
+.full{grid-column:1 / -1}
+.sidebar a{
+    text-decoration:none;
+    color:#333;
+    display:block;
+    padding:8px 0;
+    font-weight:500;
+}
+
+.sidebar a:hover{
+    color:#1565af;
+    padding-left:6px;
+    transition:.2s;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div>
+<h2>Enterprise Identity Governance Platform</h2>
+<div class="subtitle">Identity • Access • Compliance • Risk • Governance</div>
+</div>
+
+<div style="text-align:right">
+<strong>Godfred Okpoti</strong><br>
+<span class="subtitle">Chief Identity Administrator</span>
+</div>
+</header>
+
+<div class="layout">
+
+<div class="sidebar">
+<h3>Navigation</h3>
+<hr>
+<p><a href="/dashboard">🏠 Dashboard</a></p>
+<p>👤 Identity Lifecycle</p>
+<p>🔑 User Provisioning</p>
+<p>🛡️ Privileged Access</p>
+<p>✅ Access Reviews</p>
+<p>📊 Compliance</p>
+<p>📜 Audit Logs</p>
+<p>⚠️ Risk Engine</p>
+<p>📈 Reports</p>
+<p><a href="/settings">⚙️ Settings</a></p>
+</div>
+
+<div class="main">
+
+<h1>Privileged Access Management</h1>
+
+<div class="grid">
+
+<div class="card">
+<h3>Privileged Accounts</h3>
+<div class="metric">248</div>
+</div>
+
+<div class="card">
+<h3>Active Sessions</h3>
+<div class="metric">31</div>
+</div>
+
+<div class="card">
+<h3>Emergency Access</h3>
+<div class="metric">4</div>
+</div>
+
+<div class="card">
+<h3>Expired Credentials</h3>
+<div class="metric">7</div>
+</div>
+
+<div class="card full">
+<h2>Privileged Accounts Inventory</h2>
+<table>
+<tr><th>User</th><th>System</th><th>Privilege</th><th>MFA</th><th>Status</th></tr>
+<tr><td>Godfred Okpoti</td><td>AWS Production</td><td>Administrator</td><td class="pass">Enabled</td><td class="pass">Active</td></tr>
+<tr><td>Michael Sowah</td><td>Kubernetes Cluster</td><td>Cluster Admin</td><td class="pass">Enabled</td><td class="pass">Active</td></tr>
+<tr><td>David Mensah</td><td>Azure Subscription</td><td>Owner</td><td class="warn">Pending</td><td class="risk">Review Required</td></tr>
+<tr><td>Terraform Service Account</td><td>GitHub Enterprise</td><td>Repository Admin</td><td class="pass">Enabled</td><td class="warn">Monitored</td></tr>
+</table>
+</div>
+
+<div class="card full">
+<h2>Active Privileged Sessions</h2>
+<table>
+<tr><th>User</th><th>System</th><th>Login Time</th><th>Duration</th><th>Risk</th></tr>
+<tr><td>Godfred Okpoti</td><td>AWS Production</td><td>08:45</td><td>12 min</td><td class="pass">Low</td></tr>
+<tr><td>Michael Sowah</td><td>Linux Production</td><td>09:02</td><td>35 min</td><td class="warn">Medium</td></tr>
+<tr><td>Admin Service</td><td>Kubernetes</td><td>09:18</td><td>58 min</td><td class="risk">High</td></tr>
+</table>
+</div>
+
+<div class="card full">
+<h2>Just-In-Time Access Requests</h2>
+<table>
+<tr><th>Request</th><th>Resource</th><th>Requested By</th><th>Status</th></tr>
+<tr><td>Temporary AWS Admin</td><td>Production Account</td><td>Sowah Frederick</td><td class="warn">Pending Approval</td></tr>
+<tr><td>SQL Administrator</td><td>Finance Database</td><td>David Mensah</td><td class="pass">Approved</td></tr>
+<tr><td>Kubernetes Admin</td><td>AI Workload Cluster</td><td>Michael Sowah</td><td class="risk">Expired</td></tr>
+</table>
+</div>
+
+<div class="card full">
+<h2>Privileged Access Security Controls</h2>
+<ul>
+<li class="pass">Enable MFA for all administrator and break-glass accounts</li>
+<li class="pass">Record all privileged sessions for compliance evidence</li>
+<li class="warn">Require approval for production and database access</li>
+<li class="warn">Rotate privileged passwords every 30 days</li>
+<li class="risk">Disable inactive privileged accounts immediately</li>
+<li class="risk">Alert on unusual administrator activity and privilege escalation</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>

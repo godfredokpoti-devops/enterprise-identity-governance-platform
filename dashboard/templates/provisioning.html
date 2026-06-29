@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Provisioning</title>
+<style>
+body{font-family:Arial;background:#f4f6f9;margin:0;color:#222}
+header{background:#163a5f;color:white;padding:18px 35px;display:flex;justify-content:space-between;align-items:center}
+.subtitle{font-size:14px;color:#d9e8f5}
+.layout{display:flex;gap:25px;padding:30px}
+.sidebar{width:240px;background:white;padding:25px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.sidebar p{font-size:16px;margin:18px 0}
+.main{flex:1}
+h1{color:#1f4e79;font-size:42px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.metric{font-size:36px;font-weight:bold;color:#1f4e79}
+table{width:100%;border-collapse:collapse;margin-top:15px}
+th{background:#1f4e79;color:white;padding:12px}
+td{padding:12px;border:1px solid #ddd}
+.pass{color:green;font-weight:bold}
+.warn{color:orange;font-weight:bold}
+.risk{color:#c62828;font-weight:bold}
+.full{grid-column:1 / -1}
+.sidebar a{
+    text-decoration:none;
+    color:#333;
+    display:block;
+    padding:8px 0;
+    font-weight:500;
+}
+
+.sidebar a:hover{
+    color:#1565af;
+    padding-left:6px;
+    transition:.2s;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div>
+<h2>Enterprise Identity Governance Platform</h2>
+<div class="subtitle">Identity • Access • Compliance • Risk • Governance</div>
+</div>
+
+<div style="text-align:right">
+<strong>Godfred Okpoti</strong><br>
+<span class="subtitle">Chief Identity Administrator</span>
+</div>
+</header>
+
+<div class="layout">
+
+<div class="sidebar">
+<h3>Navigation</h3>
+<hr>
+<p><a href="/dashboard">🏠 Dashboard</a></p>
+<p>👤 Identity Lifecycle</p>
+<p>🔑 User Provisioning</p>
+<p>🛡️ Privileged Access</p>
+<p>✅ Access Reviews</p>
+<p>📊 Compliance</p>
+<p>📜 Audit Logs</p>
+<p>⚠️ Risk Engine</p>
+<p>📈 Reports</p>
+<p>⚙️ Settings</p>
+</div>
+
+<div class="main">
+
+<h1>User Provisioning</h1>
+
+<div class="grid">
+
+<div class="card">
+<h3>Total Requests</h3>
+<div class="metric">143</div>
+</div>
+
+<div class="card">
+<h3>Completed</h3>
+<div class="metric">121</div>
+</div>
+
+<div class="card">
+<h3>Pending Approval</h3>
+<div class="metric">18</div>
+</div>
+
+<div class="card">
+<h3>Failed Requests</h3>
+<div class="metric">4</div>
+</div>
+
+<div class="card full">
+<h2>Enterprise Provisioning Queue</h2>
+<table>
+<tr><th>User</th><th>Application</th><th>Request Type</th><th>Status</th><th>Approver</th></tr>
+<tr><td>Godfred Okpoti</td><td>AWS Console</td><td>New Access</td><td class="pass">Completed</td><td>IAM Manager</td></tr>
+<tr><td>Sowah Frederick</td><td>Azure Portal</td><td>Role Assignment</td><td class="warn">Pending Approval</td><td>Security Team</td></tr>
+<tr><td>Michael Sowah</td><td>Kubernetes Cluster</td><td>Remove Access</td><td class="risk">In Progress</td><td>Cloud Security Lead</td></tr>
+<tr><td>Terraform Service Account</td><td>GitHub Actions</td><td>Service Account Provisioning</td><td class="risk">Security Review</td><td>Privileged Access Team</td></tr>
+</table>
+</div>
+
+<div class="card full">
+<h2>Application Assignment Workflow</h2>
+<table>
+<tr><th>Application</th><th>Provisioning Action</th><th>Automation Tool</th><th>Result</th></tr>
+<tr><td>Microsoft Entra ID</td><td>Create enterprise user account</td><td>Identity Lifecycle Engine</td><td class="pass">Success</td></tr>
+<tr><td>AWS IAM</td><td>Assign least-privilege role</td><td>User Provisioning Engine</td><td class="pass">Success</td></tr>
+<tr><td>GitHub</td><td>Add user to engineering team</td><td>Access Governance Workflow</td><td class="warn">Awaiting Approval</td></tr>
+<tr><td>Kubernetes</td><td>Create namespace RBAC permission</td><td>Privileged Access Manager</td><td class="risk">Review Required</td></tr>
+</table>
+</div>
+
+<div class="card full">
+<h2>Provisioning Controls</h2>
+<ul>
+<li class="pass">Automated provisioning for standard access requests</li>
+<li class="pass">Least-privilege role assignment for cloud and engineering tools</li>
+<li class="warn">Manager approval required for elevated application access</li>
+<li class="risk">Privileged Kubernetes access requires security review</li>
+<li>All provisioning events are recorded in audit logs for compliance review</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>

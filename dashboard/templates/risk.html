@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Risk Intelligence Engine</title>
+
+<style>
+body{font-family:Arial;background:#f4f6f9;margin:0;color:#222}
+header{background:#163a5f;color:white;padding:18px 35px;display:flex;justify-content:space-between;align-items:center}
+.subtitle{font-size:14px;color:#d9e8f5}
+.layout{display:flex;gap:25px;padding:30px}
+.sidebar{width:240px;background:white;padding:25px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.sidebar p{font-size:16px;margin:18px 0}
+.sidebar a{text-decoration:none;color:#333;display:block;padding:8px 0;font-weight:500}
+.sidebar a:hover{color:#1565af;padding-left:6px;transition:.2s}
+.main{flex:1}
+h1{color:#1f4e79;font-size:42px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.12);margin-bottom:25px}
+.metric{font-size:36px;font-weight:bold;color:#1f4e79}
+table{width:100%;border-collapse:collapse;margin-top:15px}
+th{background:#1f4e79;color:white;padding:12px}
+td{padding:12px;border:1px solid #ddd}
+.pass{color:green;font-weight:bold}
+.warn{color:orange;font-weight:bold}
+.risk{color:#c62828;font-weight:bold}
+.info{color:#1565af;font-weight:bold}
+.full{grid-column:1 / -1}
+.score-box{font-size:22px;line-height:1.8}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h2>Enterprise Identity Governance Platform</h2>
+        <div class="subtitle">Identity • Access • Compliance • Risk • Governance</div>
+    </div>
+    <div style="text-align:right">
+        <strong>Godfred Okpoti</strong><br>
+        <span class="subtitle">Chief Identity Administrator</span>
+    </div>
+</header>
+
+<div class="layout">
+
+<div class="sidebar">
+    <h3>Navigation</h3>
+    <hr>
+    <p><a href="/">🏠 Dashboard</a></p>
+    <p><a href="/identity">👤 Identity Lifecycle</a></p>
+    <p><a href="/provisioning">🔑 User Provisioning</a></p>
+    <p><a href="/privileged">🛡️ Privileged Access</a></p>
+    <p><a href="/reviews">✅ Access Reviews</a></p>
+    <p><a href="/compliance">📊 Compliance</a></p>
+    <p><a href="/audit">📜 Audit Logs</a></p>
+    <p><a href="/risk">⚠️ Risk Engine</a></p>
+    <p><a href="/reports">📈 Reports</a></p>
+    <p><a href="/settings">⚙️ Settings</a></p>
+</div>
+
+<div class="main">
+
+<h1>AI Risk Intelligence Engine</h1>
+
+<div class="grid">
+
+<div class="card">
+    <h3>Overall Risk Score</h3>
+    <div class="metric">73</div>
+</div>
+
+<div class="card">
+    <h3>Critical Risks</h3>
+    <div class="metric">8</div>
+</div>
+
+<div class="card">
+    <h3>Medium Risks</h3>
+    <div class="metric">27</div>
+</div>
+
+<div class="card">
+    <h3>Low Risks</h3>
+    <div class="metric">64</div>
+</div>
+
+<div class="card full">
+<h2>AI Risk Predictions</h2>
+<table>
+<tr><th>User</th><th>Predicted Risk</th><th>Confidence</th><th>Recommendation</th></tr>
+<tr><td>Michael Sowah</td><td class="risk">Privilege Abuse</td><td>98%</td><td class="risk">Immediate Review</td></tr>
+<tr><td>David Mensah</td><td class="warn">Suspicious Login Pattern</td><td>94%</td><td class="warn">Enable Adaptive MFA</td></tr>
+<tr><td>Terraform Service Account</td><td class="warn">Excessive Permissions</td><td>96%</td><td class="info">Reduce Privileges</td></tr>
+<tr><td>Finance Admin</td><td class="risk">Credential Exposure</td><td>91%</td><td class="risk">Rotate Secrets</td></tr>
+</table>
+</div>
+
+<div class="card full">
+<h2>Risk Heat Map</h2>
+<table>
+<tr><th>Business Area</th><th>Risk Level</th><th>Reason</th></tr>
+<tr><td>AWS Production</td><td class="risk">Critical</td><td>Privileged production access without recent recertification</td></tr>
+<tr><td>Azure Identity</td><td class="warn">High</td><td>Elevated cloud administrator access pending approval</td></tr>
+<tr><td>Kubernetes</td><td class="warn">High</td><td>Cluster-admin permissions assigned to inactive identity</td></tr>
+<tr><td>GitHub Enterprise</td><td class="warn">Medium</td><td>Repository admin permissions assigned to service account</td></tr>
+<tr><td>Microsoft Entra ID</td><td class="pass">Low</td><td>MFA and conditional access controls active</td></tr>
+</table>
+</div>
+
+<div class="card full">
+<h2>Identity Behavior Analytics</h2>
+<table>
+<tr><th>Behavior</th><th>Status</th><th>Detection Method</th></tr>
+<tr><td>Impossible Travel</td><td class="risk">Detected</td><td>Location anomaly detection</td></tr>
+<tr><td>Privilege Escalation</td><td class="risk">Active</td><td>Privileged access monitoring</td></tr>
+<tr><td>Credential Sharing</td><td class="pass">Not Detected</td><td>Device fingerprinting</td></tr>
+<tr><td>Dormant Admin</td><td class="warn">Found</td><td>Inactive privileged account scan</td></tr>
+<tr><td>Multiple Failed MFA</td><td class="warn">Investigating</td><td>Authentication pattern analysis</td></tr>
+</table>
+</div>
+
+<div class="card full">
+<h2>AI Recommendations</h2>
+<ul>
+<li class="risk">Remove excessive administrator permissions</li>
+<li class="warn">Enable Just-In-Time privileged access</li>
+<li class="risk">Rotate service account credentials</li>
+<li class="warn">Block impossible travel attempts</li>
+<li class="pass">Require MFA for privileged accounts</li>
+<li class="info">Review inactive administrator accounts</li>
+<li class="info">Monitor unusual access patterns using AI</li>
+</ul>
+</div>
+
+<div class="card full">
+<h2>Enterprise Risk Matrix</h2>
+<table>
+<tr><th>Severity</th><th>Count</th><th>Action</th></tr>
+<tr><td class="risk">Critical</td><td>8</td><td>Immediate remediation required</td></tr>
+<tr><td class="warn">High</td><td>22</td><td>Security team review required</td></tr>
+<tr><td class="warn">Medium</td><td>37</td><td>Manager approval required</td></tr>
+<tr><td class="pass">Low</td><td>54</td><td>Monitor continuously</td></tr>
+</table>
+</div>
+
+<div class="card full">
+<h2>Security Score</h2>
+<div class="score-box">
+<p><strong>Identity Security Score:</strong> <span class="pass">94%</span></p>
+<p><strong>Access Governance:</strong> <span class="pass">96%</span></p>
+<p><strong>Privileged Access:</strong> <span class="warn">92%</span></p>
+<p><strong>Compliance:</strong> <span class="pass">97%</span></p>
+<p><strong>Threat Detection:</strong> <span class="pass">95%</span></p>
+</div>
+</div>
+
+<div class="card full">
+<h2>AI Risk Engine Status</h2>
+<ul>
+<li class="pass">Machine Learning Detection Enabled</li>
+<li class="pass">UEBA Analytics Active</li>
+<li class="pass">Continuous Risk Assessment Running</li>
+<li class="info">Threat Intelligence Updated</li>
+<li class="pass">Zero Trust Policies Enforced</li>
+<li class="pass">Identity Protection Operational</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Executive Reports Dashboard</title>
+
+<style>
+body{font-family:Arial;background:#f4f6f9;margin:0;color:#222}
+header{background:#163a5f;color:white;padding:18px 35px;display:flex;justify-content:space-between;align-items:center}
+.subtitle{font-size:14px;color:#d9e8f5}
+.layout{display:flex;gap:25px;padding:30px}
+.sidebar{width:240px;background:white;padding:25px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.sidebar p{font-size:16px;margin:18px 0}
+.sidebar a{text-decoration:none;color:#333;display:block;padding:8px 0;font-weight:500}
+.sidebar a:hover{color:#1565af;padding-left:6px;transition:.2s}
+.main{flex:1}
+h1{color:#1f4e79;font-size:42px;margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.12);margin-bottom:25px}
+.metric{font-size:36px;font-weight:bold;color:#1f4e79}
+table{width:100%;border-collapse:collapse;margin-top:15px}
+th{background:#1f4e79;color:white;padding:12px}
+td{padding:12px;border:1px solid #ddd}
+.pass{color:green;font-weight:bold}
+.warn{color:orange;font-weight:bold}
+.risk{color:#c62828;font-weight:bold}
+.info{color:#1565af;font-weight:bold}
+.full{grid-column:1 / -1}
+button{background:#1f4e79;color:white;border:none;padding:12px 18px;border-radius:8px;margin:8px;font-weight:bold}
+</style>
+</head>
+
+<body>
+
+<header>
+<div>
+<h2>Enterprise Identity Governance Platform</h2>
+<div class="subtitle">Identity • Access • Compliance • Risk • Governance</div>
+</div>
+<div style="text-align:right">
+<strong>Godfred Okpoti</strong><br>
+<span class="subtitle">Chief Identity Administrator</span>
+</div>
+</header>
+
+<div class="layout">
+
+<div class="sidebar">
+<h3>Navigation</h3>
+<hr>
+<p><a href="/">🏠 Dashboard</a></p>
+<p><a href="/identity">👤 Identity Lifecycle</a></p>
+<p><a href="/provisioning">🔑 User Provisioning</a></p>
+<p><a href="/privileged">🛡️ Privileged Access</a></p>
+<p><a href="/reviews">✅ Access Reviews</a></p>
+<p><a href="/compliance">📊 Compliance</a></p>
+<p><a href="/audit">📜 Audit Logs</a></p>
+<p><a href="/risk">⚠️ Risk Engine</a></p>
+<p><a href="/reports">📈 Reports</a></p>
+<p><a href="/settings">⚙️ Settings</a></p>
+</div>
+
+<div class="main">
+
+<h1>Executive Reports Dashboard</h1>
+
+<div class="grid">
+
+<div class="card">
+<h3>Identity Health Score</h3>
+<div class="metric">99%</div>
+</div>
+
+<div class="card">
+<h3>Compliance Score</h3>
+<div class="metric">97%</div>
+</div>
+
+<div class="card">
+<h3>Critical Risks</h3>
+<div class="metric">8</div>
+</div>
+
+<div class="card">
+<h3>Provisioned Users</h3>
+<div class="metric">4,518</div>
+</div>
+
+<div class="card full">
+<h2>Monthly Security Trend</h2>
+<table>
+<tr><th>Month</th><th>Identity Risk Score</th><th>Compliance Score</th><th>Access Review Completion</th></tr>
+<tr><td>January</td><td>82%</td><td>91%</td><td>78%</td></tr>
+<tr><td>February</td><td>85%</td><td>93%</td><td>82%</td></tr>
+<tr><td>March</td><td>88%</td><td>94%</td><td>86%</td></tr>
+<tr><td>April</td><td>91%</td><td>95%</td><td>91%</td></tr>
+<tr><td>May</td><td>94%</td><td>97%</td><td>96%</td></tr>
+<tr><td>June</td><td>97%</td><td>99%</td><td>99%</td></tr>
+</table>
+</div>
+
+<div class="card full">
+<h2>Executive Summary</h2>
+<table>
+<tr><th>Metric</th><th>Current Value</th><th>Business Impact</th></tr>
+<tr><td>Total Identities</td><td>12,840</td><td class="pass">Centralized identity visibility</td></tr>
+<tr><td>Privileged Accounts</td><td>248</td><td class="warn">Requires continuous monitoring</td></tr>
+<tr><td>Access Reviews Completed</td><td>318</td><td class="pass">Improved audit readiness</td></tr>
+<tr><td>Provisioning Requests</td><td>4,518</td><td class="pass">Automated access delivery</td></tr>
+<tr><td>Audit Events</td><td>1,548,231</td><td class="info">Evidence retained for compliance</td></tr>
+<tr><td>Risk Reduction</td><td>42%</td><td class="pass">Lower privileged access exposure</td></tr>
+</table>
+</div>
+
+<div class="card full">
+<h2>AI Executive Insights</h2>
+<ul>
+<li class="pass">AI predicts a 42% reduction in privilege abuse exposure.</li>
+<li class="pass">Dormant privileged accounts reduced by 88%.</li>
+<li class="pass">Access certifications completed ahead of schedule.</li>
+<li class="info">Identity maturity improved across AWS, Azure, GitHub, and Kubernetes.</li>
+<li class="warn">Kubernetes admin access still requires additional review.</li>
+</ul>
+</div>
+
+<div class="card full">
+<h2>Platform Health</h2>
+<table>
+<tr><th>Platform</th><th>Status</th><th>Notes</th></tr>
+<tr><td>Microsoft Entra ID</td><td class="pass">Healthy</td><td>SSO and MFA active</td></tr>
+<tr><td>AWS IAM</td><td class="pass">Healthy</td><td>Least privilege policies enforced</td></tr>
+<tr><td>GitHub Enterprise</td><td class="pass">Healthy</td><td>Repository access monitored</td></tr>
+<tr><td>Kubernetes</td><td class="warn">Review Required</td><td>Cluster admin permissions under review</td></tr>
+<tr><td>Okta</td><td class="pass">Healthy</td><td>Federated login operational</td></tr>
+<tr><td>ServiceNow</td><td class="pass">Healthy</td><td>Approval workflow active</td></tr>
+</table>
+</div>
+
+<div class="card full">
+<h2>AI Recommendations</h2>
+<ul>
+<li class="risk">Rotate administrator credentials for high-risk privileged accounts.</li>
+<li class="warn">Enable passwordless authentication for cloud administrators.</li>
+<li class="risk">Remove inactive privileged identities immediately.</li>
+<li class="warn">Review all Kubernetes cluster-admin assignments.</li>
+<li class="pass">Continue quarterly access certification campaigns.</li>
+<li class="info">Enable Continuous Access Evaluation across Microsoft Entra ID.</li>
+</ul>
+</div>
+
+<div class="card full">
+<h2>Export Reports</h2>
+<button>Export PDF</button>
+<button>Download Excel</button>
+<button>Generate Executive Report</button>
+<button>Share Dashboard</button>
+</div>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>

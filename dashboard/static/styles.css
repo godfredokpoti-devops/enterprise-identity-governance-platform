@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    color: #222;
+}
+
+header {
+    background: #163A5F;
+    color: white;
+    padding: 18px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #d9e8f5;
+}
+
+.layout {
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+}
+
+.sidebar {
+    width: 220px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.12);
+}
+
+.sidebar p {
+    font-size: 16px;
+    margin: 18px 0;
+}
+
+.main {
+    flex: 1;
+}
+
+h1 {
+    color: #1f4e79;
+    font-size: 42px;
+    margin-top: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.12);
+    margin-bottom: 25px;
+}
+
+.metric {
+    font-size: 34px;
+    font-weight: bold;
+    color: #1f4e79;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background: #1f4e79;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.pass {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.warn {
+    color: #d88900;
+    font-weight: bold;
+}
+
+.risk {
+    color: #c62828;
+    font-weight: bold;
+}
+
+.info {
+    color: #1f4e79;
+    font-weight: bold;
+}
+
+button {
+    background: #1f4e79;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    margin: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Audit Logs</title>
+
+<style>
+body{font-family:Arial;background:#f4f6f9;margin:0;color:#222}
+header{background:#163a5f;color:white;padding:18px 35px;display:flex;justify-content:space-between;align-items:center}
+.subtitle{font-size:14px;color:#d9e8f5}
+.layout{display:flex;gap:25px;padding:30px}
+.sidebar{width:240px;background:white;padding:25px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.sidebar p{font-size:16px;margin:18px 0}
+.sidebar a{text-decoration:none;color:#333;display:block;padding:8px 0;font-weight:500}
+.sidebar a:hover{color:#1565af;padding-left:6px;transition:.2s}
+.main{flex:1}
+h1{color:#1f4e79;font-size:42px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.12);margin-bottom:25px}
+.metric{font-size:36px;font-weight:bold;color:#1f4e79}
+table{width:100%;border-collapse:collapse;margin-top:15px}
+th{background:#1f4e79;color:white;padding:12px}
+td{padding:12px;border:1px solid #ddd}
+.pass{color:green;font-weight:bold}
+.warn{color:orange;font-weight:bold}
+.risk{color:#c62828;font-weight:bold}
+.info{color:#1565af;font-weight:bold}
+.full{grid-column:1 / -1}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h2>Enterprise Identity Governance Platform</h2>
+        <div class="subtitle">Identity • Access • Compliance • Risk • Governance</div>
+    </div>
+    <div style="text-align:right">
+        <strong>Godfred Okpoti</strong><br>
+        <span class="subtitle">Chief Identity Administrator</span>
+    </div>
+</header>
+
+<div class="layout">
+
+<div class="sidebar">
+    <h3>Navigation</h3>
+    <hr>
+    <p><a href="/">🏠 Dashboard</a></p>
+    <p><a href="/identity">👤 Identity Lifecycle</a></p>
+    <p><a href="/provisioning">🔑 User Provisioning</a></p>
+    <p><a href="/privileged">🛡️ Privileged Access</a></p>
+    <p><a href="/reviews">✅ Access Reviews</a></p>
+    <p><a href="/compliance">📊 Compliance</a></p>
+    <p><a href="/audit">📜 Audit Logs</a></p>
+    <p><a href="/risk">⚠️ Risk Engine</a></p>
+    <p><a href="/reports">📈 Reports</a></p>
+    <p><a href="/settings">⚙️ Settings</a></p>
+</div>
+
+<div class="main">
+
+<h1>Audit Logs & Evidence</h1>
+
+<div class="grid">
+
+<div class="card"><h3>Audit Events</h3><div class="metric">1,548,231</div></div>
+<div class="card"><h3>Events Today</h3><div class="metric">12,431</div></div>
+<div class="card"><h3>Critical Events</h3><div class="metric">17</div></div>
+<div class="card"><h3>Log Retention</h3><div class="metric">365 Days</div></div>
+
+<div class="card full">
+<h2>Identity Audit Trail</h2>
+<table>
+<tr><th>Time</th><th>User</th><th>Action</th><th>Resource</th><th>Result</th></tr>
+<tr><td>09:05</td><td>Godfred Okpoti</td><td>Login</td><td>AWS IAM</td><td class="pass">Success</td></tr>
+<tr><td>09:12</td><td>Michael Sowah</td><td>Privilege Escalation</td><td>Kubernetes</td><td class="warn">Approved</td></tr>
+<tr><td>09:21</td><td>Terraform Service Account</td><td>Repository Access</td><td>GitHub Enterprise</td><td class="pass">Success</td></tr>
+<tr><td>09:44</td><td>David Mensah</td><td>Role Assignment</td><td>Azure Subscription</td><td class="risk">Denied</td></tr>
+<tr><td>10:03</td><td>Security Admin</td><td>Disable Account</td><td>Microsoft Entra ID</td><td class="pass">Success</td></tr>
+</table>
+</div>
+
+<div class="card full">
+<h2>Administrative Activities</h2>
+<table>
+<tr><th>Administrator</th><th>Activity</th><th>System</th><th>Risk</th></tr>
+<tr><td>IAM Manager</td><td>Approve Production Access</td><td>AWS IAM</td><td class="pass">Low</td></tr>
+<tr><td>Cloud Security</td><td>Rotate Secrets</td><td>Vault</td><td class="pass">Low</td></tr>
+<tr><td>Platform Admin</td><td>Modify Kubernetes RBAC</td><td>Kubernetes</td><td class="warn">Medium</td></tr>
+<tr><td>Security Operations</td><td>Emergency Break Glass</td><td>Azure AD</td><td class="risk">Critical</td></tr>
+</table>
+</div>
+
+<div class="card full">
+<h2>Authentication Events</h2>
+<table>
+<tr><th>User</th><th>MFA</th><th>Device</th><th>Location</th><th>Status</th></tr>
+<tr><td>Godfred Okpoti</td><td class="pass">Passed</td><td>Windows Laptop</td><td>Virginia</td><td class="pass">Success</td></tr>
+<tr><td>Michael Sowah</td><td class="pass">Passed</td><td>Linux Server</td><td>AWS us-east-1</td><td class="pass">Success</td></tr>
+<tr><td>David Mensah</td><td class="risk">Failed</td><td>Unknown Device</td><td>Outside US</td><td class="risk">Blocked</td></tr>
+<tr><td>Terraform Service</td><td class="info">Certificate</td><td>GitHub Runner</td><td>Azure</td><td class="pass">Success</td></tr>
+</table>
+</div>
+
+<div class="card full">
+<h2>Security Alerts</h2>
+<table>
+<tr><th>Alert</th><th>Severity</th><th>Status</th></tr>
+<tr><td>Impossible Travel Detected</td><td class="warn">High</td><td class="warn">Investigating</td></tr>
+<tr><td>Privilege Escalation</td><td class="risk">Critical</td><td class="risk">Open</td></tr>
+<tr><td>Repeated Failed Login</td><td class="warn">Medium</td><td class="pass">Resolved</td></tr>
+<tr><td>Inactive Admin Account</td><td class="warn">High</td><td class="info">Remediated</td></tr>
+</table>
+</div>
+
+<div class="card full">
+<h2>Audit Evidence Collection</h2>
+<ul>
+<li class="pass">Every login is logged</li>
+<li class="pass">Every privileged command is recorded</li>
+<li class="pass">Every role assignment is tracked</li>
+<li class="pass">All policy changes are version controlled</li>
+<li class="info">Audit evidence exported to SIEM</li>
+<li class="warn">One-year immutable retention enabled</li>
+<li class="risk">Real-time anomaly detection active</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>

@@ -12,7 +12,7 @@ from class_privileged_session_manager import PrivilegedSessionManager
 app = Flask(
     __name__,
     template_folder="templates",
-    static_folder="."
+    static_folder="static"
 )
 
 initialize_database()
@@ -54,6 +54,41 @@ def home():
         sessions=sessions,
         logs=logs
     )
+@app.route("/identity")
+def identity():
+    return render_template("identity.html")
 
+@app.route("/provisioning")
+def provisioning():
+    return render_template("provisioning.html")
+
+@app.route("/privileged")
+def privileged():
+    return render_template("privileged.html")
+
+@app.route("/reviews")
+def reviews():
+    return render_template("reviews.html")
+
+@app.route("/compliance")
+def compliance():
+    return render_template("compliance.html")
+
+@app.route("/audit")
+def audit():
+    return render_template("audit.html")
+
+@app.route("/risk")
+def risk():
+    return render_template("risk.html")
+
+@app.route("/reports")
+def reports():
+    return render_template("reports.html")
+
+@app.route("/settings")
+def settings():
+    return render_template("settings.html")
+    
 if __name__ == "__main__":
     app.run(debug=True)
